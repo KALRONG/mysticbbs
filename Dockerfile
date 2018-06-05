@@ -12,5 +12,4 @@ ADD mystic/ /mystic/
 RUN cp /root/upgrade /mystic/
 WORKDIR /mystic/
 RUN ./upgrade
-HEALTHCHECK --interval=5m --timeout=3s  CMD curl -f https://kalrong.net/ || exit 1
 ENTRYPOINT while true;do sleep 50000 ; done
