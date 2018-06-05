@@ -18,5 +18,5 @@ RUN mv /root/libcl.so.3.4.3 /lib/libcl.so
 RUN rm -fr /root/*
 WORKDIR /mystic/
 RUN ./upgrade
-RUN apt-get purge wget build-essential manpages-dev unzip unrar
+RUN apt-get -y purge wget build-essential manpages-dev unzip unrar
 ENTRYPOINT while true;do sleep 50000 ; done
