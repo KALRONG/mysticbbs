@@ -12,7 +12,7 @@ RUN unrar-nonfree x mys112a39_l64.rar
 ADD ./mystic /mystic
 RUN cp /root/upgrade /mystic/
 RUN rm -fr /root/*
-ADD ftp://ftp.franken.de/pub/crypt/cryptlib/cl3431.zip
+ADD ftp://ftp.franken.de/pub/crypt/cryptlib/cl3431.zip /root
 RUN unzip cl3431.zip
 RUN make shared
 RUN mv libcl.so.3.4.3 /lib/libcl.so
