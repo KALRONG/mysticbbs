@@ -9,7 +9,7 @@ RUN dpkg --add-architecture i386; apt-get update; apt-get -y install libc6:i386
 RUN apt-get clean
 ADD http://www.mysticbbs.com/downloads/mys112a39_l64.rar /root
 RUN unrar-nonfree x mys112a39_l64.rar
-ADD mystic/ /mystic/
+ADD ./mystic /mystic
 RUN cp /root/upgrade /mystic/
 RUN rm -fr /root/*
 WORKDIR /mystic/
