@@ -12,9 +12,9 @@ ADD ./mystic /mystic
 RUN cp /root/upgrade /mystic/
 RUN rm -fr /root/*
 RUN wget ftp://ftp.franken.de/pub/crypt/cryptlib/cl3431.zip
-RUN unzip -a cl3431.zip
+RUN unzip -a cl3441.zip
 RUN make shared
-RUN mv /root/libcl.so.3.4.3 /lib/libcl.so
+RUN mv /root/libcl.so.3.4.4 /lib/libcl.so
 RUN rm -fr /root/*
 WORKDIR /mystic/
 RUN ./upgrade
